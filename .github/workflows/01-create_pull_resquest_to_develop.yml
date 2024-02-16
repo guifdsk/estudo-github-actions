@@ -20,4 +20,3 @@ jobs:
           body: "Teste Body"
           branch: ${{ github.ref }}
           base: develop
-          token: ${{ secrets.GITHUB_TOKEN }}
