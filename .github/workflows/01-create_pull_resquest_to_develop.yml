@@ -1,0 +1,22 @@
+name: Open Pull Request To Develop
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  open_pull_request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: "Teste"
+          body: "Teste Body"
+          branch: ${{ github.ref }}
+          base: develop
